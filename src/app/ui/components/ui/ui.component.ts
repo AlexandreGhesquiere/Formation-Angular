@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { threadId } from 'worker_threads';
 
 @Component({
   selector: 'app-ui',
