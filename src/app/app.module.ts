@@ -8,6 +8,8 @@ import { CoreModule } from './core/core.module';
 import { LoginModule } from './login/login.module';
 import { IconsModule } from './icons/icons.module';
 import { TextModule } from './text/text.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { TextModule } from './text/text.module';
     LoginModule,
     IconsModule,
     TextModule,
-    CoreModule
+    CoreModule,
+    NgbModule,
+    FontAwesomeModule
 
   ],
   providers: [],
