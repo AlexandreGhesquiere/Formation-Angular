@@ -33,7 +33,7 @@
                 "input": "./node_modules/bootstrap/dist/css/bootstrap.css"
               }
             ],
-            "stylePreprocessorOption": {
+            "stylePreprocessorOptions": {
               "includePaths" : [
                 "src/stylings/"
               ]
