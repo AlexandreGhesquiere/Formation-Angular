@@ -13,6 +13,7 @@ export class PageListOrdersComponent implements OnInit {
   ngOnInit(): void {
     this.os.collection.subscribe((datas) => {
       console.log(datas);
+      
     })
   }
 
