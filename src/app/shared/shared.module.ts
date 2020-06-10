@@ -5,14 +5,16 @@ import { BtnComponent } from './components/btn/btn.component';
 import { TotalPipe } from './pipes/total.pipe';
 import { StateDirective } from './directives/state.directive';
 import { NbJoursCheckDirective } from './directives/nb-jours-check.directive';
+import { TableDarkComponent } from './components/table-dark/table-dark.component';
 
 
 
 @NgModule({
-  declarations: [TableLightComponent, BtnComponent, TotalPipe, StateDirective, NbJoursCheckDirective],
+  declarations: [TableLightComponent, BtnComponent, TotalPipe, StateDirective, NbJoursCheckDirective, TableDarkComponent],
   imports: [
     CommonModule
   ],
-  exports: [BtnComponent, TableLightComponent, TotalPipe, StateDirective, NbJoursCheckDirective]
+  exports: [BtnComponent, TableLightComponent, TotalPipe, StateDirective, NbJoursCheckDirective, TableDarkComponent]
 })
+
 export class SharedModule { }
