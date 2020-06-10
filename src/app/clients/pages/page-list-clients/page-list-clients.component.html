@@ -1,10 +1,21 @@
-<app-table-light *ngIf="collection" [headers]="headers">
+<app-table-dark *ngIf="collection" [headers]="headers">
   <tr *ngFor="let item of collection">
-   <td>{{ item.state }}</td>
+   <td [appState]="item.state">
+     <select (change)="changeStateClient(item, $event)">
+       <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{ state }}</option>
+     </select>
+    </td>
+
         <td>{{ item.tva }}</td>
         <td>{{ item.id }}</td>
         <td>{{ item.name }}</td>
-        <td>{{ item.ca }}</td>
+
+        <td appCaCheck [value]="item.ca" [comparedValue]="100000">{{ item.ca }}</td>
+
         <td>{{ item.comment }}</td>
   </tr>
-</app-table-light>
+</app-table-dark>
+
+<app-btn [label]="btnRoute.label" [action]="btnRoute.action" (clicked)="addNewClient()"></app-btn>
+<app-btn [label]="btnHref.label" [href]="btnHref.href"></app-btn>
+<app-btn [label]="btnAction.label" [action]="btnAction.action" (clicked)="openPopup()"></app-btn>

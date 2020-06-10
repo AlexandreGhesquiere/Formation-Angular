@@ -7,16 +7,17 @@ import { StateDirective } from './directives/state.directive';
 import { NbJoursCheckDirective } from './directives/nb-jours-check.directive';
 import { TableDarkComponent } from './components/table-dark/table-dark.component';
 import { RouterModule } from '@angular/router';
+import { CaCheckDirective } from './directives/ca-check.directive';
 
 
 
 @NgModule({
-  declarations: [TableLightComponent, BtnComponent, TotalPipe, StateDirective, NbJoursCheckDirective, TableDarkComponent],
+  declarations: [TableLightComponent, BtnComponent, TotalPipe, StateDirective, NbJoursCheckDirective, TableDarkComponent, CaCheckDirective],
   imports: [
     CommonModule,
     RouterModule
   ],
-  exports: [BtnComponent, TableLightComponent, TotalPipe, StateDirective, NbJoursCheckDirective, TableDarkComponent]
+  exports: [BtnComponent, TableLightComponent, TotalPipe, StateDirective, NbJoursCheckDirective, TableDarkComponent, CaCheckDirective]
 })
 
 export class SharedModule { }

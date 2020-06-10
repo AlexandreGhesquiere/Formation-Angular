@@ -47,7 +47,7 @@
   ],
   "clients": [
     {
-      "state": "Active",
+      "state": "INACTIVE",
       "tva": 20,
       "id": 1,
       "name": "Christophe2",
@@ -60,6 +60,22 @@
       "name": "Modis",
       "ca": 120000,
       "comment": "un comment pour client modis"
+    },
+    {
+      "name": "Toto",
+      "comment": "toto",
+      "id": 122,
+      "tva": 20,
+      "ca": 1220000,
+      "state": "ACTIVE"
+    },
+    {
+      "name": "Michelle",
+      "comment": "Commentaire pour le nouveau client en brut",
+      "id": 123,
+      "tva": 20,
+      "ca": 1220000,
+      "state": "ACTIVE"
     }
   ]
 }
