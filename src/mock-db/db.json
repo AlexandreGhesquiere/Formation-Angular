@@ -1,40 +1,44 @@
 {
   "orders": [
     {
-      "tjmHt": 1200,
+      "tjmHT": 500,
       "nbJours": 1,
       "tva": 20,
-      "state": "CONFIRMED",
+      "state": "CANCEL",
+      "tjmHt": 1200,
       "typePresta": "formation55",
       "client": "M2i",
       "comment": "merci m2i",
       "id": 1
     },
     {
-      "tjmHt": 1200,
+      "tjmHT": 500,
       "nbJours": 1,
       "tva": 20,
       "state": "OPTION",
+      "tjmHt": 1200,
       "typePresta": "formation",
       "client": "Modis",
       "comment": "merci modis",
       "id": 2
     },
     {
-      "tjmHt": 500,
+      "tjmHT": 500,
       "nbJours": 1,
       "tva": 20,
       "state": "OPTION",
+      "tjmHt": 500,
       "typePresta": "Formation",
       "client": "nemesys",
       "comment": "fssdgh",
       "id": 3
     },
     {
-      "tjmHt": 700,
+      "tjmHT": 500,
       "nbJours": 5,
       "tva": 20,
-      "state": "CONFIRMED",
+      "state": "OPTION",
+      "tjmHt": 700,
       "typePresta": "Formation",
       "client": "Atos",
       "comment": "Comment pour Atos",
