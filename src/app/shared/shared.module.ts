@@ -9,6 +9,7 @@ import { TableDarkComponent } from './components/table-dark/table-dark.component
 import { RouterModule } from '@angular/router';
 import { CaCheckDirective } from './directives/ca-check.directive';
 import { TemplatesModule } from '../templates/templates.module';
+import { TextModule } from '../text/text.module';
 
 
 
@@ -19,7 +20,7 @@ import { TemplatesModule } from '../templates/templates.module';
     RouterModule,
     TemplatesModule
   ],
-  exports: [BtnComponent, TableLightComponent, TotalPipe, StateDirective, NbJoursCheckDirective, TableDarkComponent, CaCheckDirective, TemplatesModule]
+  exports: [BtnComponent, TableLightComponent, TotalPipe, StateDirective, NbJoursCheckDirective, TableDarkComponent, CaCheckDirective, TemplatesModule, TextModule]
 })
 
 export class SharedModule { }
