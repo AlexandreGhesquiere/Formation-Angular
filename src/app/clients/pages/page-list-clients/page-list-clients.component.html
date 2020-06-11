@@ -1,3 +1,4 @@
+<app-template-b title="Clients" subtitle = "All clients">
 <app-table-dark *ngIf="collection" [headers]="headers">
   <tr *ngFor="let item of collection">
    <td [appState]="item.state">
@@ -19,3 +20,4 @@
 <app-btn [label]="btnRoute.label" [action]="btnRoute.action" (clicked)="addNewClient()"></app-btn>
 <app-btn [label]="btnHref.label" [href]="btnHref.href"></app-btn>
 <app-btn [label]="btnAction.label" [action]="btnAction.action" (clicked)="openPopup()"></app-btn>
+</app-template-b>

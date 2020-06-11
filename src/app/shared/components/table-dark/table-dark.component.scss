@@ -7,7 +7,16 @@
   .state-option {
     background: $color3;
   }
+
   .state-confirmed {
+    background: $color-success;
+  }
+
+  .state-inactive {
+    background: $color-error;
+  }
+
+  .state-active {
     background: $color-success;
   }
 
@@ -17,5 +26,21 @@
 
   .lower {
     background: $color-error;
+  }
+}
+
+app-template-a {
+  .table-dark {
+    .state-option {
+      background: $color1;
+    }
+  }
+}
+
+app-template-b {
+  .table-dark {
+    .state-option {
+      background: $color2;
+    }
   }
 }
