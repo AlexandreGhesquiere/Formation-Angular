@@ -26,7 +26,7 @@ export class PageListOrdersComponent implements OnInit {
   ngOnInit(): void {
     this.btnRoute = {
       label: "Add an order",
-      route: "Add"
+      route: "add"
     };
 
     this.btnHref = {
@@ -38,6 +38,7 @@ export class PageListOrdersComponent implements OnInit {
       label: "Open dialogue",
       action: true
     };
+
 
     // this.os.collection.subscribe((datas) => {
     //   this.collection = datas;

@@ -43,6 +43,49 @@
       "client": "Atos",
       "comment": "Comment pour Atos",
       "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "tjmHt": 500,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "CONFIRMED",
+      "typePresta": "Oui",
+      "client": "Non",
+      "comment": "toto",
+      "id": 6
+    },
+    {
+      "tjmHt": 500,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "Test",
+      "client": "Test",
+      "comment": "oui",
+      "id": 7
+    },
+    {
+      "tjmHt": null,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "Coucou",
+      "client": "oui ou non",
+      "comment": "Test2",
+      "id": 8
+    },
+    {
+      "tjmHT": "750",
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "frgerg",
+      "client": "rehgtehrt",
+      "comment": "vsefhtszh",
+      "id": 9
     }
   ],
   "clients": [
@@ -55,19 +98,19 @@
       "comment": "un comment pour client christophe2"
     },
     {
-      "state": "Active",
+      "state": "ACTIVE",
       "id": 2,
       "name": "Modis",
       "ca": 120000,
       "comment": "un comment pour client modis"
     },
     {
+      "state": "INACTIVE",
       "name": "Toto",
       "comment": "toto",
       "id": 122,
       "tva": 20,
-      "ca": 1220000,
-      "state": "ACTIVE"
+      "ca": 1220000
     },
     {
       "name": "Michelle",

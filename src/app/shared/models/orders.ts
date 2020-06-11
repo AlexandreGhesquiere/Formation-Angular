@@ -3,7 +3,6 @@ import { OrderI } from '../interfaces/orders-i';
 
 
 export class Order implements OrderI {
-  tjmHT = 500;
   nbJours = 1;
   tva = 20;
   state = StateOrder.OPTION;
@@ -11,6 +10,7 @@ export class Order implements OrderI {
   client: string;
   comment: string;
   id: number;
+  tjmHT = 500;
 
   constructor(obj?: Partial<Order>) {
     if (obj) {
