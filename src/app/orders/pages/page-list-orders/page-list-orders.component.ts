@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { OrdersService } from '../../services/orders.service';
 import { Order } from 'src/app/shared/models/orders';
 import { StateOrder } from 'src/app/shared/enums/state-orders.enum';
@@ -11,7 +13,8 @@ import { Btn } from 'src/app/shared/interfaces/btn-i'
 })
 export class PageListOrdersComponent implements OnInit {
 
-  public collection: Order[];
+  public collection$: Observable<Order[]>
+  // public collection: Order[];
   public headers: string[];
   public states = Object.values(StateOrder);
   public btnRoute: Btn;
@@ -36,9 +39,11 @@ export class PageListOrdersComponent implements OnInit {
       action: true
     };
 
-    this.os.collection.subscribe((datas) => {
-      this.collection = datas;
-    });
+    // this.os.collection.subscribe((datas) => {
+    //   this.collection = datas;
+    // });
+
+this.collection$ = this.os.collection;
     this.headers = [
       "Type",
       "Client",
