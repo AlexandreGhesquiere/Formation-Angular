@@ -36,7 +36,7 @@ export class PageListOrdersComponent implements OnInit {
 
     this.btnAction = {
       label: "Open dialogue",
-      action: true
+      action: true,
     };
 
 
@@ -67,5 +67,8 @@ this.collection$ = this.os.collection;
     alert("Open popup");
   }
 
+  // public edit(item: Order) {
+  //   this.router.navigate
+  // }
 
 }

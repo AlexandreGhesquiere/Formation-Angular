@@ -3,6 +3,7 @@ import { ClientsService } from '../../services/clients.service';
 import { Client } from 'src/app/shared/models/clients'
 import { Btn } from 'src/app/shared/interfaces/btn-i';
 import { StateClient } from 'src/app/shared/enums/state-clients.enum';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-page-list-clients',
@@ -17,23 +18,19 @@ export class PageListClientsComponent implements OnInit {
   public btnRoute: Btn;
   public btnHref: Btn;
   public btnAction: Btn;
-  public newClient: Client;
-  constructor(private os: ClientsService) { }
+  public btnDelete: Btn;
+  public btnUpdate: Btn;
+
+  constructor(private cs: ClientsService,
+    private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
 
-    this.newClient = {
-      name: "Michelle",
-      comment: "Commentaire pour le nouveau client en brut",
-      id: 123,
-      tva: 20,
-      ca: 1220000,
-      state: StateClient.ACTIVE
-    }
 
     this.btnRoute = {
       label: "Add a client",
-      action: true
+      route: "add"
     };
 
     this.btnHref = {
@@ -46,7 +43,17 @@ export class PageListClientsComponent implements OnInit {
       action: true
     };
 
-    this.os.collection.subscribe((datas) => {
+    this.btnDelete = {
+      label: "Delete",
+      action: true
+    }
+
+    this.btnUpdate = {
+      label: "Update",
+      action: true
+    }
+
+    this.cs.collection.subscribe((datas) => {
       this.collection = datas;
     });
     this.headers = [
@@ -55,7 +62,8 @@ export class PageListClientsComponent implements OnInit {
       "Id",
       "Name",
       "Ca",
-      "Comment"
+      "Comment",
+      "Action"
     ]
   }
 
@@ -64,14 +72,15 @@ export class PageListClientsComponent implements OnInit {
   }
 
   public changeStateClient(item: Client, event){
-    this.os.changeStateClient(item, event.target.value).subscribe((result) => {
+    this.cs.changeStateClient(item, event.target.value).subscribe((result) => {
       item.state = result.state;
-    } )
+    });
   }
 
-  public addNewClient(){
-    this.os.addClient(this.newClient).subscribe((result) => {
-      this.collection.push(result);
-    })
+  public deleteClient(item: Client) {
+    this.cs.deleteClient(item).subscribe((result) => {
+      this.router.navigate(['deleted'], {relativeTo: this.route})
+    });
   }
+
 }
